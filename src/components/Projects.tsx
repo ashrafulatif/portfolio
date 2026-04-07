@@ -16,12 +16,13 @@ const GithubIcon = (props: any) => (
 
 // High-quality image fallbacks since local images are missing
 const projectImages: {[key: string]: string} = {
-  "1": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200", // Business/ERP
-  "2": "https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&q=80&w=1200", // Task management
-  "3": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=1200", // E-commerce
-  "4": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200", // Reservation/Bus
-  "5": "https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&q=80&w=1200", // Airplane
-  "6": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200"  // Blog
+  "1": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200", 
+  "2": "https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&q=80&w=1200", 
+  "3": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=1200", 
+  "4": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1200", 
+  "5": "https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&q=80&w=1200", 
+  "6": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200",
+  "7": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1200"  
 };
 
 export function Projects() {
@@ -51,7 +52,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-10 relative overflow-hidden">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -87,7 +88,7 @@ export function Projects() {
                   <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] shadow-2xl glass p-1 transition-all duration-700 group-hover:shadow-[0_20px_50px_rgba(45,212,191,0.15)]">
                      <div className="w-full h-full rounded-[1.8rem] overflow-hidden relative">
                         <Image 
-                           src={projectImages[project.id] || project.img}
+                           src={project.img || projectImages[project.id]}
                            alt={project.title}
                            fill
                            className="object-cover transition-transform duration-[1.5s] group-hover:scale-105 group-hover:rotate-1"
@@ -127,15 +128,17 @@ export function Projects() {
                   </div>
 
                   <div className="pt-6 flex items-center gap-10">
-                     <a 
-                       href={project.github} 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       className="flex items-center gap-2 group/btn hover:text-teal transition-all duration-300"
-                     >
-                       <GithubIcon className="w-4 h-4 text-navy group-hover/btn:text-teal group-hover/btn:scale-110 transition-all" />
-                       <span className="text-[10px] font-bold uppercase tracking-widest">Source</span>
-                     </a>
+                     {project.github && (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 group/btn hover:text-teal transition-all duration-300"
+                        >
+                          <GithubIcon className="w-4 h-4 text-navy group-hover/btn:text-teal group-hover/btn:scale-110 transition-all" />
+                          <span className="text-[10px] font-bold uppercase tracking-widest">Source</span>
+                        </a>
+                     )}
                      
                      <a 
                        href={project.liveLink} 

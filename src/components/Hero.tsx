@@ -174,7 +174,7 @@ export function Hero() {
           <div className="relative z-10 w-[85%] h-[85%]">
             <div className="w-full h-full blob-mask overflow-hidden bg-slate-bg  shadow-2xl relative group">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV9xoQu-5NI8qnarzXxeBrqkNaFxDjxVq1zW3NNHM0c_oJmQzTtsjcYVFXJe3OkYD7CqujTNoLMvHMtZFIrg7YWgPedTOGTpVNFz3Re0UxaXSYUbN8jXr6jYxlEsfc1MDgUg09cHyFvVs1hEyJt93tyNMXwdrO5wzkHoCMWwbxU-d8sHzUx7oH1ozdVcUgXPmsvf2EAdQXaiWSm-Vbd0bgqGknwzwMDAlNJZH6GWWcVYKAIhOyuAGROUkzt07xYbvJSR_fK8V60IJH"
+                src="/photo.png"
                 alt="Ashraful Haque"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

@@ -8,10 +8,68 @@
     ]
   },
   "projects": [
+
     {
       "id": "1",
+      "title": "SplitEase",
+      "img": "/images/projects/splitease.png",
+      "github": "https://github.com/ashrafulatif/splitease-client",
+      "liveLink": "https://splitease-client.vercel.app/",
+      "description": "SplitEase is a modern, user-friendly web application designed to simplify expense tracking and bill splitting among friends, roommates, and travelers. Built with a focus on seamless user experience and real-time collaboration, SplitEase eliminates the hassle of manually calculating shared costs.",
+      "skills": [
+        "Next.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Zod",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "JWT",
+        "Stripe",
+        "Better Auth"
+      ]
+    },
+{
+      "id": "2",
+      "title": "Medica",
+      "img": "/images/projects/medica.png",
+      "github": "",
+      "liveLink": "https://medica-bay-ten.vercel.app/",
+      "description": "Medica is a modern, full-stack e-commerce web application designed for purchasing over-the-counter (OTC) medicines.",
+      "skills": [
+        "Next.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Zod",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "JWT",
+        "Better Auth"
+      ]
+    },
+     {
+      "id": "3",
+      "title": "Recipo",
+      "img": "/images/projects/recipo.png",
+      "github": "https://github.com/ashrafulatif/food-find-recipo",
+      "liveLink": "https://find-recipo.vercel.app/",
+      "description": "Recipo is a modern, user-friendly AI Featured web application designed to simplify expense tracking and bill splitting among friends, roommates, and travelers. Built with a focus on seamless user experience and real-time collaboration, SplitEase eliminates the hassle of manually calculating shared costs.",
+      "skills": [
+        "Next.js",
+        "TanStack Query",
+        "Zod",
+        "TypeScript",
+        "Tailwind CSS",
+        "Motion"
+      ]
+    },
+    {
+      "id": "4",
       "title": "All-in-One Business Solution",
-      "img": "./img/all-in-one-business-solution.png",
+      "img": "/images/projects/all-in-one-business-solution.png",
       "github": "https://github.com/ashrafulatif/all-in-one-business-solution",
       "liveLink": "https://github.com/ashrafulatif/all-in-one-business-solution",
       "description": "The aim of this web application is to deliver a complete ERP solution to businesses of all sizes, allowing them to simplify activity, improve efficiency, and increase productivity.",
@@ -26,18 +84,18 @@
       ]
     },
     {
-      "id": "2",
+      "id": "5",
       "title": "Collaborative Task Management System",
-      "img": "./img/collaborative-task-management-system.png",
+      "img": "/images/projects/collaborative-task-management-system.png",
       "github": "https://github.com/ashrafulatif/CollaborativeTaskManagementSystem-",
       "liveLink": "https://github.com/ashrafulatif/CollaborativeTaskManagementSystem-",
       "description": "This web-based Collaborative Task Management System streamlines project management and enhances teamwork. With roles for Admin, Developer, Client, and Manager, it enables efficient collaboration and task handling. Built with PHP and JavaScript.",
       "skills": ["JavaScript", "HTML5", "PHP", "CSS", "MySQL"]
     },
     {
-      "id": "3",
+      "id": "6",
       "title": "Dealora (E-Commerce Platform)",
-      "img": "./img/dealora.png",
+      "img": "/images/projects/dealora.png",
       "github": "https://github.com/ashrafulatif/dealora",
       "liveLink": "https://github.com/ashrafulatif/dealora",
       "description": "The aim of this project is to build a scalable and secure B2C marketplace using ASP.NET, enabling businesses to list products and consumers to easily browse, purchase, and track orders with integrated payment solutions.",
@@ -48,40 +106,6 @@
         "ASP.NET MVC",
         "Bootstrap",
         "Entity Framework"
-      ]
-    },
-    {
-      "id": "4",
-      "title": "TicketReservationSystem (Easytrip)",
-      "img": "./img/dealora.png",
-      "github": "https://github.com/ashrafulatif/TicketReservationSystem_Easytrip",
-      "liveLink": "https://github.com/ashrafulatif/TicketReservationSystem_Easytrip",
-      "description": "Windows form based windows application written in C# where an user can reserve air ticket, bus ticket simultaneously.",
-      "skills": ["C#", "MSSQL", "OOP", "Windows Form"]
-    },
-    {
-      "id": "5",
-      "title": "Airline Reservation System",
-      "img": "./img/dealora.png",
-      "github": "https://github.com/ashrafulatif/AirlineReservationSystem",
-      "liveLink": "https://github.com/ashrafulatif/AirlineReservationSystem",
-      "description": "This is a simple console-based java project Where an user can reserve air ticket.",
-      "skills": ["Java", "OOP"]
-    },
-    {
-      "id": "6",
-      "title": "Blog Application",
-      "img": "./img/dealora.png",
-      "link": "https://github.com/ashrafulatif/BlogApplication",
-      "liveLink": "https://github.com/ashrafulatif/BlogApplication",
-      "description": "This blog application allows users to create, update, and upload blogs, while administrators can manage blogs and bloggers. Built with NestJS for the backend, Next.js for the frontend, PostgreSQL as the database, and JWT for secure authentication, the application ensures all new users are assigned the blogger role by default, with admin roles being restricted.",
-      "skills": [
-        "Next.js",
-        "NestJS",
-        "PostgreSQL",
-        "API",
-        "TypeScript",
-        "Tailwind CSS"
       ]
     }
   ],
