@@ -1,0 +1,14 @@
+{
+  "skills": [
+    { "name": "JavaScript", "src": "/images/Icon/JavaScript.png", "level": "Expert" },
+    { "name": "NextJS", "src": "/images/Icon/NextJS.png", "level": "Expert" },
+    { "name": "React", "src": "/images/Icon/React JS.png", "level": "Expert" },
+    { "name": "Node.js", "src": "/images/Icon/Node JS.png", "level": "Intermediate" },
+    { "name": "Tailwind CSS", "src": "/images/Icon/Tailwind.png", "level": "Expert" },
+    { "name": "Git", "src": "/images/Icon/Git.png", "level": "Intermediate" },
+    { "name": "Github", "src": "/images/Icon/Github.png", "level": "Intermediate" },
+    { "name": "PostgresSQL", "src": "/images/Icon/PostgresSQL.png", "level": "Intermediate" },
+    { "name": "Postman", "src": "/images/Icon/Postman.png", "level": "Intermediate" },
+    { "name": "TypeScript.js", "src": "/images/Icon/TypeScript.png", "level": "Expert" }
+  ]
+}
