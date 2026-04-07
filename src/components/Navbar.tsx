@@ -2,26 +2,32 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Home, Code2, Zap, BookOpen, FileText, Moon, Sun } from "lucide-react";
+import { Home, User, Code2, Zap, Briefcase, Mail, BookOpen, FileText, Moon, Sun } from "lucide-react";
 
 const navLinks = [
-  { name: "Home",     icon: Home },
-  { name: "Projects", icon: Code2 },
-  { name: "Skills",   icon: Zap },
-  { name: "Blog",     icon: BookOpen },
+  { name: "Home",       icon: Home,       id: "hero" },
+  { name: "About",      icon: User,       id: "about" },
+  { name: "Projects",   icon: Code2,      id: "projects" },
+  { name: "Skills",     icon: Zap,        id: "skills" },
+  { name: "Experience", icon: Briefcase,  id: "experience" },
+  { name: "Contact",    icon: Mail,       id: "contact" },
 ];
 
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(document.documentElement.classList.contains("dark"));
+    const saved = localStorage.getItem("theme");
+    const initial = saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setIsDark(initial);
+    document.documentElement.classList.toggle("dark", initial);
   }, []);
 
   const toggle = () => {
     const next = !isDark;
     setIsDark(next);
     document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
   };
 
   return (
@@ -66,15 +72,28 @@ export function Navbar() {
 
       <nav className="flex items-center gap-1 bg-editorial-black/96 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-white/6">
 
-        {navLinks.map(({ name, icon: Icon }, idx) => {
+        {navLinks.map(({ name, icon: Icon, id }, idx) => {
           const isActive  = active  === idx;
           const isHovered = hovered === idx;
 
           return (
             <motion.a
               key={name}
-              href="#"
-              onClick={(e) => { e.preventDefault(); setActive(idx); }}
+              href={`#${id}`}
+              onClick={(e) => { 
+                e.preventDefault(); 
+                setActive(idx); 
+                const element = document.getElementById(id);
+                if (element) {
+                   const offset = 80; // Offset for fixed navbar if needed, or adjust for preference
+                   const elementPosition = element.getBoundingClientRect().top;
+                   const offsetPosition = elementPosition + window.pageYOffset - offset;
+                   window.scrollTo({
+                      top: name === "Home" ? 0 : offsetPosition,
+                      behavior: "smooth"
+                   });
+                }
+              }}
               onHoverStart={() => setHovered(idx)}
               onHoverEnd={() => setHovered(null)}
               whileTap={{ scale: 0.92 }}
@@ -127,7 +146,10 @@ export function Navbar() {
 
         {/* Resume */}
         <motion.a
-          href="#"
+          href="/Ashraful_Haque_Resume.pdf"
+          download="Ashraful_Haque_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="relative hidden md:flex items-center gap-1.5 bg-soft-orange text-white px-5 py-2.5 rounded-full text-[10px] font-bold tracking-widest uppercase mr-1 overflow-hidden"

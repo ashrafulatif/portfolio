@@ -61,7 +61,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[70vh] flex flex-col lg:flex-row items-center gap-16 lg:gap-8 pt-10 pb-20 overflow-visible">
+    <section id="hero" className="relative min-h-[70vh] flex flex-col lg:flex-row items-center gap-16 lg:gap-8 pt-10 pb-20 overflow-visible">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -111,9 +111,16 @@ export function Hero() {
 
         <motion.div variants={itemVariants} className="space-y-8">
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start"> 
-            <button className="text-navy font-sans font-bold text-xs tracking-widest uppercase border-b-2 border-navy/10 hover:border-navy transition-all py-2 px-1 hover:pb-3 active:scale-95">
+            <a 
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-navy font-sans font-bold text-xs tracking-widest uppercase border-b-2 border-navy/10 hover:border-navy transition-all py-2 px-1 hover:pb-3 active:scale-95 cursor-pointer"
+            >
               Get In Touch
-            </button>
+            </a>
           </div>
 
           {/* Social Row */}
