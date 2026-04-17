@@ -3,7 +3,7 @@ export function Footer() {
 
   return (
     <footer className="py-12 border-t border-navy/5  backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="space-y-2 text-center md:text-left">
           <h3 className="font-serif text-2xl text-navy">
             Ashraful Haque<span className="text-teal">.</span>

@@ -1,7 +1,10 @@
+"use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, ArrowRight, ExternalLink, Send } from "lucide-react";
 import data from "@/Data/Data.json";
+import { sendContactAction } from "@/actions/contact";
 
 // Custom Brand SVGs
 const GithubIcon = (props: any) => (
@@ -44,15 +47,24 @@ export function Contact() {
     },
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
+    
+    try {
+      const result = await sendContactAction(formState);
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormState({ name: "", email: "", message: "" });
+      } else {
+        alert(result.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("An unexpected error occurred. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({ name: "", email: "", message: "" });
-    }, 1500);
+    }
   };
 
   return (
@@ -176,7 +188,7 @@ export function Contact() {
                     className="w-full group relative px-8 py-4 overflow-hidden rounded-full bg-navy dark:bg-teal text-white dark:text-navy text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500 active:scale-[0.98] disabled:opacity-70 shadow-lg"
                   >
                     <div className="absolute inset-0 bg-teal dark:bg-navy dark:text-black translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                    <span className="relative z-10 flex items-center justify-center gap-3 group-hover:text-white dark:group-hover:text-white transition-colors">
+                    <span className="relative z-10 flex items-center justify-center gap-3 group-hover:text-white dark:group-hover:text-black transition-colors">
                       {isSubmitting ? "Sending..." : "Send Message"}
                       {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                     </span>

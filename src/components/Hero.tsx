@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "motion/react";
 import { Sparkles } from "lucide-react";
 import data from "@/Data/Data.json";
+import Link from "next/link";
 
 // Custom Brand SVGs
 const GithubIcon = (props: any) => (
@@ -111,16 +112,17 @@ export function Hero() {
 
         <motion.div variants={itemVariants} className="space-y-8">
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start"> 
-            <a 
+            <Link 
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-navy font-sans font-bold text-xs tracking-widest uppercase border-b-2 border-navy/10 hover:border-navy transition-all py-2 px-1 hover:pb-3 active:scale-95 cursor-pointer"
+              className="group relative text-navy font-sans font-bold text-xs tracking-widest uppercase border-b-2 border-navy/10 transition-all py-2 px-1 active:scale-95 cursor-pointer 
+                         after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-[2px] after:bg-teal-500 after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 after:ease-out"
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
 
           {/* Social Row */}
@@ -181,7 +183,7 @@ export function Hero() {
           <div className="relative z-10 w-[85%] h-[85%]">
             <div className="w-full h-full blob-mask overflow-hidden bg-slate-bg  shadow-2xl relative group">
               <Image
-                src="/photo.png"
+                src="/photo.jpeg"
                 alt="Ashraful Haque"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

@@ -1,14 +1,42 @@
 {
-  "skills": [
-    { "name": "JavaScript", "src": "/images/Icon/JavaScript.png", "level": "Expert" },
-    { "name": "NextJS", "src": "/images/Icon/NextJS.png", "level": "Expert" },
-    { "name": "React", "src": "/images/Icon/React JS.png", "level": "Expert" },
-    { "name": "Node.js", "src": "/images/Icon/Node JS.png", "level": "Intermediate" },
-    { "name": "Tailwind CSS", "src": "/images/Icon/Tailwind.png", "level": "Expert" },
-    { "name": "Git", "src": "/images/Icon/Git.png", "level": "Intermediate" },
-    { "name": "Github", "src": "/images/Icon/Github.png", "level": "Intermediate" },
-    { "name": "PostgresSQL", "src": "/images/Icon/PostgresSQL.png", "level": "Intermediate" },
-    { "name": "Postman", "src": "/images/Icon/Postman.png", "level": "Intermediate" },
-    { "name": "TypeScript.js", "src": "/images/Icon/TypeScript.png", "level": "Expert" }
+  "categories": [
+    {
+      "title": "Frontend",
+      "description": "Building immersive and responsive user interfaces.",
+      "skills": [
+        { "name": "NextJS", "src": "/images/Icon/NextJS.png", "level": "Expert", "showInStack": true },
+        { "name": "React", "src": "/images/Icon/React JS.png", "level": "Expert", "showInStack": true },
+        { "name": "Tailwind CSS", "src": "/images/Icon/Tailwind.png", "level": "Expert", "showInStack": true }
+      ]
+    },
+    {
+      "title": "Backend",
+      "description": "Designing scalable services and server-side logic.",
+      "skills": [
+        { "name": "Node.js", "src": "/images/Icon/Node JS.png", "level": "Intermediate", "showInStack": false },
+        { "name": "Express.js", "src": "/images/Icon/Express.png", "level": "Expert", "showInStack": true },
+        { "name": "NestJS", "src": "/images/Icon/NestJS.png", "level": "Intermediate", "showInStack": true }
+      ]
+    },
+    {
+      "title": "Languages & Tools",
+      "description": "Streamlining development with modern workflows.",
+      "skills": [
+        { "name": "TypeScript.js", "src": "/images/Icon/TypeScript.png", "level": "Expert", "showInStack": true },
+        { "name": "JavaScript", "src": "/images/Icon/JavaScript.png", "level": "Expert", "showInStack": false },
+        { "name": "Java", "src": "/images/Icon/Java.png", "level": "Intermediate", "showInStack": false },
+        { "name": "Git", "src": "/images/Icon/Git.png", "level": "Intermediate", "showInStack": false },
+        { "name": "Github", "src": "/images/Icon/Github.png", "level": "Intermediate", "showInStack": true },
+        { "name": "Postman", "src": "/images/Icon/Postman.png", "level": "Intermediate", "showInStack": true }
+      ]
+    },
+     {
+      "title": "Databases",
+      "description": "Managing data persistence and query optimization.",
+      "skills": [
+        { "name": "PostgreSQL", "src": "/images/Icon/PostgreSQL.png", "level": "Intermediate", "showInStack": true },
+        { "name": "Prisma", "src": "/images/Icon/Prisma.png", "level": "Intermediate", "showInStack": true }
+      ]
+    }
   ]
 }

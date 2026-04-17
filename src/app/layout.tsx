@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/providers/SmoothScroll";
+import LoaderWrapper from "@/components/layout/LoaderWrapper";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -34,7 +36,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <LoaderWrapper>
+          <SmoothScroll>{children}</SmoothScroll>
+        </LoaderWrapper>
+      </body>
     </html>
   );
 }
