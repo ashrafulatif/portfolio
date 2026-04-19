@@ -14,6 +14,7 @@
       "title": "SplitEase",
       "img": "/images/projects/splitease.png",
       "github": "https://github.com/ashrafulatif/splitease-client",
+      "server": "https://github.com/ashrafulatif/splitease-server",
       "liveLink": "https://splitease-client.vercel.app/",
       "description": "SplitEase is a modern, user-friendly web application designed to simplify expense tracking and bill splitting among friends, roommates, and travelers. Built with a focus on seamless user experience and real-time collaboration, SplitEase eliminates the hassle of manually calculating shared costs.",
       "skills": [
@@ -34,7 +35,8 @@
       "id": "2",
       "title": "Medica",
       "img": "/images/projects/medica.png",
-      "github": "",
+      "github": "https://github.com/ashrafulatif/medica-client",
+      "server": "https://github.com/ashrafulatif/medica-server",
       "liveLink": "https://medica-bay-ten.vercel.app/",
       "description": "Medica is a modern, full-stack e-commerce web application designed for purchasing over-the-counter (OTC) medicines.",
       "skills": [
@@ -87,7 +89,7 @@
       "title": "Collaborative Task Management System",
       "img": "/images/projects/collaborative-task-management-system.png",
       "github": "https://github.com/ashrafulatif/CollaborativeTaskManagementSystem-",
-      "liveLink": "https://github.com/ashrafulatif/CollaborativeTaskManagementSystem-",
+      "liveLink": "",
       "description": "This web-based Collaborative Task Management System streamlines project management and enhances teamwork. With roles for Admin, Developer, Client, and Manager, it enables efficient collaboration and task handling. Built with PHP and JavaScript.",
       "skills": ["JavaScript", "HTML5", "PHP", "CSS", "MySQL"]
     },
@@ -96,7 +98,7 @@
       "title": "Dealora (E-Commerce Platform)",
       "img": "/images/projects/dealora.png",
       "github": "https://github.com/ashrafulatif/dealora",
-      "liveLink": "https://github.com/ashrafulatif/dealora",
+      "liveLink": "",
       "description": "The aim of this project is to build a scalable and secure B2C marketplace using ASP.NET, enabling businesses to list products and consumers to easily browse, purchase, and track orders with integrated payment solutions.",
       "skills": [
         "ASP.NET",

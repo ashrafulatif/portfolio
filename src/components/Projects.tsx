@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ExternalLink, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ExternalLink, ArrowUpRight, ChevronDown, ChevronUp, Server } from "lucide-react";
 import Image from "next/image";
 import data from "@/Data/Data.json";
 
@@ -14,7 +14,7 @@ const GithubIcon = (props: any) => (
   </svg>
 );
 
-// High-quality image fallbacks since local images are missing
+// image fallback
 const projectImages: {[key: string]: string} = {
   "1": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=1200", 
   "2": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=1200 ", 
@@ -96,6 +96,18 @@ function ProjectCard({ project, idx, itemVariants }: { project: any, idx: number
                 </a>
              )}
              
+             {project.server && (
+                <a 
+                  href={project.server} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 group/btn hover:text-teal transition-all duration-300"
+                >
+                  <Server className="w-4 h-4 text-navy group-hover/btn:text-teal group-hover/btn:scale-110 transition-all" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Server</span>
+                </a>
+             )}
+             
              <a 
                href={project.liveLink} 
                target="_blank" 
@@ -138,7 +150,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-10 relative overflow-hidden">
+    <section id="projects" className="py-10 relative">
       <motion.div
         variants={containerVariants}
         initial="hidden"

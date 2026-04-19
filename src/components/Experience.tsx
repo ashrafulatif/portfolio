@@ -77,9 +77,9 @@ export function Experience() {
                className="group relative grid grid-cols-1 md:grid-cols-12 gap-8 items-start py-10"
              >
                 {/* Visual Timeline element */}
-                <div className="hidden md:flex flex-col items-center col-span-1 absolute left-1/2 -ml-[1px] -top-12 h-24  opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                {/* <div className="hidden md:flex flex-col items-center col-span-1 absolute left-1/2 -ml-[1px] -top-12 h-24  opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                     <div className="w-[1px] h-full bg-gradient-to-b from-transparent to-teal/20" />
-                </div>
+                </div> */}
 
                 <div className="md:col-span-3 space-y-2">
                     <div className="flex items-center gap-1.5 text-teal/60 font-sans text-xs tracking-widest uppercase font-bold">

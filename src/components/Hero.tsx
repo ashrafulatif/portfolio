@@ -187,6 +187,7 @@ export function Hero() {
                 alt="Ashraful Haque"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                sizes="(max-width: 768px) 100vw, 448px"
                 priority
               />
               <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors" />

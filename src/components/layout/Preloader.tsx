@@ -32,7 +32,7 @@ export function Preloader() {
             strokeWidth="1.0"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-teal drop-shadow-[0_0_15px_rgba(45,212,191,0.4)]"
+            className="text-teal"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -50,7 +50,7 @@ export function Preloader() {
                 opacity: { duration: 1, ease: "easeInOut" },
               }}
               className="stroke-teal"
-              strokeWidth="1.5"
+              strokeWidth="1"
             />
 
             {/* Animated Letter A - Left stroke - draws once and stays */}
@@ -64,7 +64,7 @@ export function Preloader() {
                 delay: 0.5,
               }}
               className="stroke-teal"
-              strokeWidth="1.5"
+              strokeWidth="1"
             />
 
             {/* Animated Letter A - Cross stroke - draws once and stays */}
@@ -78,14 +78,14 @@ export function Preloader() {
                 delay: 1.2,
               }}
               className="stroke-teal"
-              strokeWidth="1.5"
+              strokeWidth="1"
             />
           </motion.svg>
         </motion.div>
 
         {/* Glowing background effect - static after one pulse */}
         <motion.div
-          className="absolute inset-[-10%] rounded-full bg-teal/20 blur-xl"
+          className="absolute inset-[-10%] rounded-full bg-teal/10 blur-xl"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{
             scale: 1,

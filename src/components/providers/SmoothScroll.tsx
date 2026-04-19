@@ -15,6 +15,18 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       touchMultiplier: 2,
     });
 
+    // Handle initial height
+    lenis.resize();
+
+    // Force Lenis to resize whenever the content height changes
+    const resizeObserver = new ResizeObserver(() => {
+      // Small timeout to allow Framer Motion animations to settle
+      setTimeout(() => {
+        lenis.resize();
+      }, 100);
+    });
+    resizeObserver.observe(document.body);
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -24,6 +36,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     return () => {
       lenis.destroy();
+      resizeObserver.disconnect();
     };
   }, []);
 
