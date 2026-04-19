@@ -4,7 +4,7 @@
       "title": "Frontend",
       "description": "Building immersive and responsive user interfaces.",
       "skills": [
-        { "name": "NextJS", "src": "/images/Icon/NextJS.png", "level": "Expert", "showInStack": true },
+        { "name": "NextJS", "src": "/images/Icon/NextJS.jpg", "level": "Expert", "showInStack": true },
         { "name": "React", "src": "/images/Icon/React JS.png", "level": "Expert", "showInStack": true },
         { "name": "Tailwind CSS", "src": "/images/Icon/Tailwind.png", "level": "Expert", "showInStack": true }
       ]
